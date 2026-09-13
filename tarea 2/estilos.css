@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f2f4f8; 
+    color: #333;
+}
+
+.contenedor-perfil, .contenedor-seccion {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+}
+
+.visual-jpeg {
+    width: 160px;
+    height: 160px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 3px solid #2c3e50;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.visor-pdf {
+    width: 80%;       
+    max-width: 700px;  
+    height: 400px;     
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: block;
+}
+
+table, th, td {
+    border: 1px solid #333;
+    border-collapse: collapse; 
+}
+
+th, td {
+    padding: 10px; 
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+}
