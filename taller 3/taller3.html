@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CALCULATE.WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+
+    <section class="contenedor">
+        <h2>Calculadora</h2>
+        <form id="formularioCliente" class="habilidades">
+            
+            <div>
+                <label for="pnumero">Primer número:</label>
+                <input type="text" id="pnumero">
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="snumero">Segundo número:</label>
+                <input type="text" id="snumero">
+            </div>
+            <br>
+            <button type="submit">ENVIAR OPERACIONES</button>
+
+        </form>
+
+        <h2>RESULTADOS</h2>
+
+        <ul class="habilidades">
+            <li>
+                SUMA <br>
+                <span id="SUMA" style="color: rgb(48, 23, 160)"></span>
+            </li>
+            <li>
+                RESTA <br>
+                <span id="RESTA" style="color: rgb(28, 24, 155)"></span>
+            </li>
+            <li>
+                MULTIPLICACIÓN<br>
+                <span id="MULTIPLICACION" style="color: rgb(50, 28, 138)"></span>
+            </li>
+            <li>
+                DIVISIÓN<br>
+                <span id="DIVISION" style="color: rgb(36, 21, 174)"></span>
+            </li>
+            <li>
+                MOD<br>
+                <span id="MOD" style="color: rgb(36, 18, 151)"></span>
+            </li>    
+        </ul>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
