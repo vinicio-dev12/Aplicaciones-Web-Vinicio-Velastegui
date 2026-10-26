@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAG de Acceso - Parqueadero ULEAM</title>
+    <link rel="stylesheet" href="../../estilos/estilos_generales.css">
+    <style>
+        .tag-container {
+            background: var(--color-blanco);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .tag-container h2 {
+            color: var(--color-primario);
+            margin-bottom: 0.5rem;
+        }
+
+        .tag-container p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Diseño del TAG digital tipo credencial */
+        .tag-card {
+            background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+            color: var(--color-blanco);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-align: left;
+        }
+
+        .tag-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag-header h3 {
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-badge {
+            background-color: var(--color-acento);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .tag-body p {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .tag-body strong {
+            color: var(--color-acento);
+        }
+
+        .qr-placeholder {
+            background: var(--color-blanco);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .qr-placeholder img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .acciones-tag {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-imprimir {
+            background-color: #27ae60;
+            flex: 1;
+        }
+
+        .btn-imprimir:hover {
+            background-color: #219653;
+        }
+
+        .btn-salir {
+            background-color: #7f8c8d;
+            flex: 1;
+        }
+
+        .btn-salir:hover {
+            background-color: #6c7a89;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Parqueadero Inteligente ULEAM</h1>
+    </header>
+
+    <main>
+        <div class="tag-container">
+            <h2>¡TAG Generado con Éxito!</h2>
+            <p>Su pase de acceso vehicular se ha registrado correctamente en el sistema.</p>
+
+            <!-- Tarjeta del TAG -->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h3>ULEAM - ACCESO VEHICULAR</h3>
+                    <span class="tag-badge">ACTIVO</span>
+                </div>
+                <div class="tag-body">
+                    <p><strong>Propietario:</strong> Vinicio Velastegui</p>
+                    <p><strong>Placa:</strong> ABC-1234</p>
+                    <p><strong>Vehículo:</strong> Chevrolet Sail (Gris)</p>
+                    <p><strong>Código TAG:</strong> TAG-ULEAM-2026-0098</p>
+                </div>
+                <div class="qr-placeholder">
+                    <!-- Simulación de código QR visual utilizando un generador público en línea -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=TAG-ULEAM-2026-0098" alt="Código QR TAG Acceso">
+                </div>
+            </div>
+
+            <div class="acciones-tag">
+                <button onclick="window.print()" class="btn btn-imprimir">Imprimir / Descargar</button>
+                <a href="../../index.html" class="btn btn-salir">Finalizar / Salir</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ULEAM - Facultad de Ingeniería y Ciencias Informáticas</p>
+    </footer>
+
+</body>
+</html>

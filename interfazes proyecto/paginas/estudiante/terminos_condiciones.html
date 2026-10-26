@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Parqueadero ULEAM</title>
+    <link rel="stylesheet" href="../../estilos/estilos_generales.css">
+    <style>
+        .terms-container {
+            background: var(--color-blanco);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .terms-container h2 {
+            color: var(--color-primario);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .terms-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 1rem;
+            height: 200px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Parqueadero Inteligente ULEAM</h1>
+    </header>
+
+    <main>
+        <div class="terms-container">
+            <h2>Términos y Condiciones de Uso</h2>
+            
+            <div class="terms-box">
+                <p><strong>1. Uso de las instalaciones:</strong> El acceso al parqueadero de la ULEAM es exclusivo para estudiantes, docentes, personal administrativo e invitados autorizados que cumplan con el registro vehicular correspondiente.</p>
+                <br>
+                <p><strong>2. Responsabilidad:</strong> La institución provee el espacio físico y el control de accesos automatizado, pero no se responsabiliza por objetos de valor dejados dentro de los vehículos, ni por daños fortuitos ocasionados por terceros ajenos al control de seguridad.</p>
+                <br>
+                <p><strong>3. Normas de tránsito internas:</strong> La velocidad máxima permitida dentro del campus y área de parqueo es de 10 km/h. Está estrictamente prohibido bloquear pasos peatonales o estacionarse en zonas no autorizadas (zonas amarillas o rojas), lo cual acarreará multas o la anulación temporal del TAG de acceso.</p>
+                <br>
+                <p><strong>4. Privacidad de datos:</strong> Sus datos personales y de los vehículos registrados están protegidos conforme a las normativas internas de seguridad y uso de tecnologías de la información de la ULEAM.</p>
+            </div>
+
+            <form action="registrar_vehiculo.html" method="GET">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="aceptar" name="aceptar" required>
+                    <label for="aceptar">He leído y acepto los términos y condiciones del servicio</label>
+                </div>
+
+                <button type="submit" class="btn btn-full">Continuar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ULEAM - Facultad de Ingeniería y Ciencias Informáticas</p>
+    </footer>
+
+</body>
+</html>

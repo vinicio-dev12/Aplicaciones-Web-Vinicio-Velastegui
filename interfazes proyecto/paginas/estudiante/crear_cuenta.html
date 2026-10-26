@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Parqueadero ULEAM</title>
+    <link rel="stylesheet" href="../../estilos/estilos_generales.css">
+    <style>
+        .auth-container {
+            background: var(--color-blanco);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .auth-container h2 {
+            color: var(--color-primario);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.65rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: var(--transicion);
+        }
+
+        .form-group input:focus {
+            border-color: var(--color-secundario);
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 85, 165, 0.3);
+        }
+
+        .btn-full {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .auth-links {
+            margin-top: 1.2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .auth-links a {
+            color: var(--color-secundario);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Parqueadero Inteligente ULEAM</h1>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Registro de Usuario</h2>
+            <form action="terminos_condiciones.html" method="GET">
+                <div class="form-group">
+                    <label for="nombres">Nombres y Apellidos</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ej. Vinicio Velastegui" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cedula">Cédula de Identidad</label>
+                    <input type="text" id="cedula" name="cedula" maxlength="10" placeholder="10 dígitos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Institucional</label>
+                    <input type="email" id="correo" name="correo" placeholder="usuario@live.uleam.edu.ec" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" required>
+                </div>
+
+                <button type="submit" class="btn btn-full">Registrarse</button>
+            </form>
+
+            <div class="auth-links">
+                <p>¿Ya tienes cuenta? <a href="inicio_sesion.html">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ULEAM - Facultad de Ingeniería y Ciencias Informáticas</p>
+    </footer>
+<script src="../../javascript/utilidades.js"></script>
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const cedulaInput = document.getElementById('cedula').value;
+        const correoInput = document.getElementById('correo').value;
+
+        // Validar Cédula
+        if (!validarCedulaEcuatoriana(cedulaInput)) {
+            alert('Error: La cédula ingresada no es válida o no corresponde al formato ecuatoriano de 10 dígitos.');
+            event.preventDefault(); // Evita que se envíe el formulario
+            return;
+        }
+
+        // Validar Correo ULEAM
+        if (!validarCorreoUleam(correoInput)) {
+            alert('Error: Debe ingresar un correo institucional válido de la ULEAM (ej. usuario@live.uleam.edu.ec o usuario@uleam.edu.ec).');
+            event.preventDefault();
+            return;
+        }
+
+        // Si todo es correcto, permite el envío
+    });
+</script>
+</body>
+</html>
