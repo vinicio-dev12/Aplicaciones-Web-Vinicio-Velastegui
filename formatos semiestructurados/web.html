@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Registro de Estudiantes</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+ <form id="registroForm" novalidate>
+ <h2>Registro de Estudiantes</h2>
+
+ <div class="input-group">
+ <label for="cedula">Cédula:</label>
+ <input type="text" id="cedula" maxlength="10" placeholder="Ej. 0912345678">
+ <span class="error" id="errorCedula"></span>
+ </div>
+ <div class="input-group">
+ <label for="apellidos">Apellidos:</label>
+ <input type="text" id="apellidos" placeholder="Ej. Pérez Mora">
+ <span class="error" id="errorApellidos"></span>
+ </div>
+ <div class="input-group">
+ <label for="nombres">Nombres:</label>
+ <input type="text" id="nombres" placeholder="Ej. Juan Carlos">
+ <span class="error" id="errorNombres"></span>
+ </div>
+ <div class="input-group">
+ <label for="direccion">Dirección:</label>
+ <input type="text" id="direccion" placeholder="Ej. Av. 9 de Octubre y Boyacá">
+ <span class="error" id="errorDireccion"></span>
+ </div>
+ <div class="input-group">
+ <label for="telefono">Teléfono:</label>
+ <input type="text" id="telefono" maxlength="10" placeholder="Ej. 0991234567">
+ <span class="error" id="errorTelefono"></span>
+ </div>
+ <div class="input-group">
+ <label for="email">Correo Electrónico:</label>
+ <input type="text" id="email" placeholder="usuario@correo.com">
+ <span class="error" id="errorEmail"></span>
+ </div>
+ <div class="input-group">
+ <label for="facultad">Facultad:</label>
+ <select id="facultad">
+ <option value="">Seleccione...</option>
+ <option>Ingeniería</option>
+ <option>Ciencias Administrativas</option>
+ <option>Ciencias Médicas</option>
+ <option>Jurisprudencia</option>
+ <option>Arquitectura</option>
+ <option>Comunicación Social</option>
+ </select>
+ <span class="error" id="errorFacultad"></span>
+ </div>
+ <div class="fila">
+ <div class="input-group">
+ <label for="nivel">Nivel:</label>
+ <select id="nivel">
+ <option value="">Seleccione...</option>
+ <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+ <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+ </select>
+ <span class="error" id="errorNivel"></span>
+ </div>
+ <div class="input-group">
+ <label for="paralelo">Paralelo:</label>
+ <select id="paralelo">
+ <option value="">Seleccione...</option>
+ <option>A</option><option>B</option><option>C</option><option>D</option><option>E</option>
+ </select>
+ <span class="error" id="errorParalelo"></span>
+ </div>
+ </div>
+ <button type="submit">Registrar Estudiante</button>
+ </form>
+ </div>
+
+ <aside class="container panel">
+ <h2>localStorage</h2>
+ <p class="info">Clave: <b>estudiantes</b> · Registros: <b id="contador">0</b></p>
+ <pre id="visorJSON">[]</pre>
+ <button type="button" id="btnLimpiar" class="secundario">Borrar todos los registros</button>
+ </aside>
+
+ <script src="script.js"></script>
+</body>
+</html>

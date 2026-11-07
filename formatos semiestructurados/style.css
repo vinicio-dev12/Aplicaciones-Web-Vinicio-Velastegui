@@ -1,0 +1,87 @@
+body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background-color: #f4f7f6;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ gap: 20px;
+ padding: 50px 20px;
+ flex-wrap: wrap;
+}
+.container {
+ background: white;
+ padding: 30px;
+ border-radius: 8px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+ width: 400px;
+ max-width: 100%;
+ box-sizing: border-box;
+}
+.fila {
+ display: flex;
+ gap: 15px;
+}
+.fila .input-group {
+ flex: 1;
+}
+.input-group {
+ margin-bottom: 15px;
+}
+label {
+ display: block;
+ margin-bottom: 5px;
+ font-weight: bold;
+}
+input, select {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+ font-size: 14px;
+ background: white;
+}
+button {
+ width: 100%;
+ padding: 10px;
+ background-color: #28a745;
+ color: white;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 16px;
+}
+button:hover {
+ background-color: #218838;
+}
+button.secundario {
+ background-color: #dc3545;
+ font-size: 14px;
+}
+button.secundario:hover {
+ background-color: #b52a37;
+}
+.error {
+ color: #dc3545;
+ font-size: 12px;
+ margin-top: 5px;
+ display: block;
+}
+.panel h2 {
+ margin-top: 0;
+}
+.info {
+ font-size: 14px;
+ color: #555;
+}
+#visorJSON {
+ background: #1e1e1e;
+ color: #9cdcfe;
+ padding: 12px;
+ border-radius: 4px;
+ font-size: 12px;
+ height: 420px;
+ overflow: auto;
+ white-space: pre-wrap;
+ word-break: break-word;
+}
